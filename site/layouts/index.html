@@ -136,7 +136,37 @@
         <p>{{ $home.contact.text }}</p>
       </div>
       <div class="contact-actions">
-        <a class="btn btn-light" href="{{ $home.contact.cta.href }}">{{ $home.contact.cta.label }}<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+        <form class="contact-form" method="post" action="{{ "/api/contact" | relURL }}" data-contact-form data-sending="{{ $home.contact.form.sending }}" data-success="{{ $home.contact.form.success }}" data-error="{{ $home.contact.form.error }}">
+          <input type="hidden" name="lang" value="{{ .Site.Language.Lang }}">
+          <div class="contact-form-grid">
+            <label class="contact-field" for="contact-name">
+              <span>{{ $home.contact.form.name_label }}</span>
+              <input id="contact-name" name="name" type="text" autocomplete="name" minlength="2" maxlength="100" placeholder="{{ $home.contact.form.name_placeholder }}" required>
+            </label>
+            <label class="contact-field" for="contact-email">
+              <span>{{ $home.contact.form.email_label }}</span>
+              <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="{{ $home.contact.form.email_placeholder }}" required>
+            </label>
+            <label class="contact-field contact-field-wide" for="contact-outcome">
+              <span>{{ $home.contact.form.outcome_label }}</span>
+              <textarea id="contact-outcome" name="outcome" rows="4" minlength="10" maxlength="1500" placeholder="{{ $home.contact.form.outcome_placeholder }}" required></textarea>
+            </label>
+            <label class="contact-field" for="contact-systems">
+              <span>{{ $home.contact.form.systems_label }}</span>
+              <textarea id="contact-systems" name="systems" rows="3" minlength="2" maxlength="500" placeholder="{{ $home.contact.form.systems_placeholder }}" required></textarea>
+            </label>
+            <label class="contact-field" for="contact-constraint">
+              <span>{{ $home.contact.form.constraint_label }}</span>
+              <textarea id="contact-constraint" name="constraint" rows="3" minlength="2" maxlength="1000" placeholder="{{ $home.contact.form.constraint_placeholder }}" required></textarea>
+            </label>
+          </div>
+          <label class="contact-consent"><input name="consent" type="checkbox" value="accepted" required><span>{{ $home.contact.form.consent }}</span></label>
+          <div class="contact-submit">
+            <button class="btn btn-light" type="submit" data-contact-submit><span>{{ $home.contact.cta.label }}</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></button>
+            <p class="contact-form-status" role="status" aria-live="polite" data-contact-status></p>
+          </div>
+          <div class="contact-honeypot" aria-hidden="true"><label for="contact-website">Website</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        </form>
         <dl>
           <div><dt>{{ i18n "contact_email" }}</dt><dd><a href="mailto:{{ $site.email }}">{{ $site.email }}</a></dd></div>
           <div><dt>{{ i18n "contact_location" }}</dt><dd>{{ $home.contact.location }}</dd></div>

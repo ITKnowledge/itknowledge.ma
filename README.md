@@ -14,10 +14,12 @@ site/                 Projet Hugo
   i18n/               Libellés d'interface (navigation, contact, 404)
   layouts/            Gabarits (accueil, 404, composants d'en-tête, pied et icônes)
   assets/css/         Système visuel sombre/clair, responsive, minifié et fingerprinté
-  assets/js/          Persistance du thème et navigation mobile, sans dépendance
+  assets/js/          Thème, navigation mobile et soumission du formulaire
+functions/api/        Pages Function qui valide le formulaire et transmet l'e-mail
+tests/                Tests Node du traitement des demandes
 archive/              Miroir figé de l'ancien site (version 2017) — référence, ne pas modifier
 deploy/               Scripts de déploiement
-docs/               Documents de conception
+docs/                 Documents de conception
 ```
 
 ## Développement
@@ -31,6 +33,18 @@ Build de production :
 
 ```sh
 hugo --source site --gc --minify     # sortie : site/public/
+```
+
+Tests du formulaire :
+
+```sh
+npm test
+```
+
+Pour servir le site avec la Pages Function locale après le build :
+
+```sh
+npx wrangler pages dev site/public
 ```
 
 ## Modifier le contenu
@@ -50,6 +64,17 @@ Le DNS d'itknowledge.ma est déjà chez Cloudflare.
 - Build command : `hugo --source site --gc --minify`
 - Build output directory : `site/public`
 - Variable d'environnement : `HUGO_VERSION = 0.170.1`
+
+Le formulaire `/api/contact` utilise Cloudflare Pages Functions et l'API
+Resend. Dans les variables et secrets du projet Pages, configurer :
+
+- `RESEND_API_KEY`
+- `CONTACT_FROM_EMAIL` — facultatif, `ITKnowledge Website <website@itknowledge.ma>` par défaut
+- `CONTACT_TO_EMAIL` — facultatif, `contact@itknowledge.ma` par défaut
+
+Le domaine d'envoi `itknowledge.ma` doit être vérifié dans Resend. Les
+enregistrements Resend utilisent des sous-domaines dédiés et ne remplacent pas
+les MX de Google Workspace. Ne jamais stocker la clé API dans le dépôt.
 
 **Option B — upload direct** :
 

@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="{{ "/img/itknowledge-mark.svg" | relURL }}">
   <link type="text/plain" rel="author" href="/humans.txt">
   {{ $org := dict
     "@context" "https://schema.org"

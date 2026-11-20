@@ -2,7 +2,7 @@ hero:
   eyebrow: "Agentic AI · automation · IT engineering"
   title: ["Build", "Learn", "Solve"]
   text: "Useful, secure AI agents connected to your operations. We turn processes, knowledge and infrastructure into measurable capabilities—from prototype to production."
-  primary: { label: "Assess a use case", href: "mailto:contact@itknowledge.ma?subject=Agentic%20AI%20project" }
+  primary: { label: "Assess a use case", href: "#contact" }
   secondary: { label: "Explore our services", href: "#services" }
   signals_label: "Delivery principles"
   signals:
@@ -107,5 +107,20 @@ contact:
   eyebrow: "Discuss the next use case"
   title: "A process to improve? Start by making it measurable."
   text: "Describe the expected outcome, the systems involved and the main constraint. We will respond with a concrete first approach."
-  cta: { label: "Start the conversation", href: "mailto:contact@itknowledge.ma?subject=Agentic%20AI%20project" }
+  cta: { label: "Submit the request" }
+  form:
+    name_label: "Full name"
+    name_placeholder: "Your name"
+    email_label: "Email address"
+    email_placeholder: "you@company.com"
+    outcome_label: "Expected outcome"
+    outcome_placeholder: "What measurable result do you want to achieve?"
+    systems_label: "Tools and systems involved"
+    systems_placeholder: "ERP, email, CRM, internal portal…"
+    constraint_label: "Main constraint"
+    constraint_placeholder: "Security, timeline, data, integration…"
+    consent: "I agree that this information may be used to respond to my request."
+    sending: "Sending…"
+    success: "Thank you. Your request has been sent."
+    error: "Submission failed. Try again or email contact@itknowledge.ma."
   location: "Casablanca, Morocco"

@@ -2,7 +2,7 @@ hero:
   eyebrow: "IA agentique · automatisation · ingénierie IT"
   title: ["Construire", "Apprendre", "Résoudre"]
   text: "Des agents IA utiles, sécurisés et connectés à vos opérations. Nous transformons vos processus, vos connaissances et votre infrastructure en capacités mesurables, du prototype à la production."
-  primary: { label: "Évaluer un cas d'usage", href: "mailto:contact@itknowledge.ma?subject=Projet%20IA%20agentique" }
+  primary: { label: "Évaluer un cas d'usage", href: "#contact" }
   secondary: { label: "Explorer nos services", href: "#services" }
   signals_label: "Principes de livraison"
   signals:
@@ -107,5 +107,20 @@ contact:
   eyebrow: "Parlons du prochain cas d'usage"
   title: "Un processus à améliorer ? Commençons par le rendre mesurable."
   text: "Décrivez le résultat attendu, les outils concernés et la contrainte principale. Nous vous répondrons avec une première approche concrète."
-  cta: { label: "Démarrer la discussion", href: "mailto:contact@itknowledge.ma?subject=Projet%20IA%20agentique" }
+  cta: { label: "Envoyer la demande" }
+  form:
+    name_label: "Nom complet"
+    name_placeholder: "Votre nom"
+    email_label: "Adresse e-mail"
+    email_placeholder: "vous@entreprise.ma"
+    outcome_label: "Résultat attendu"
+    outcome_placeholder: "Quel résultat mesurable souhaitez-vous obtenir ?"
+    systems_label: "Outils et systèmes concernés"
+    systems_placeholder: "ERP, messagerie, CRM, portail interne…"
+    constraint_label: "Contrainte principale"
+    constraint_placeholder: "Sécurité, délai, données, intégration…"
+    consent: "J’accepte que ces informations soient utilisées pour répondre à ma demande."
+    sending: "Envoi en cours…"
+    success: "Merci. Votre demande a bien été envoyée."
+    error: "L’envoi a échoué. Réessayez ou écrivez-nous à contact@itknowledge.ma."
   location: "Casablanca, Maroc"
