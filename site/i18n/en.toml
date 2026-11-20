@@ -1,20 +1,32 @@
 [nav_services]
 other = "Services"
 
-[nav_expertise]
-other = "Expertise"
+[nav_method]
+other = "Approach"
 
-[nav_about]
-other = "About"
+[nav_expertise]
+other = "Capabilities"
 
 [nav_contact]
 other = "Contact"
 
-[contact_address]
-other = "Address"
+[theme_light]
+other = "Switch to light theme"
+
+[theme_dark]
+other = "Switch to dark theme"
+
+[menu_open]
+other = "Open menu"
 
 [contact_email]
 other = "Email"
+
+[contact_location]
+other = "Location"
+
+[footer_note]
+other = "Agentic AI services · Casablanca, Morocco"
 
 [notfound_title]
 other = "404 — Page not found"

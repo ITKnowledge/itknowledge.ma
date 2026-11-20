@@ -4,57 +4,102 @@
 {{ $site := hugo.Data.site }}
 
 <section class="hero">
-  <div class="container hero-inner">
-    <div>
-      <p class="hero-kicker">{{ $home.hero.kicker }}</p>
-      <h1 class="hero-motto">
-        {{- range $i, $w := $home.hero.motto -}}
-          {{ if $i }}<span class="motto-sep">, </span>{{ end }}<span class="motto-word">{{ $w }}</span>
-        {{- end -}}
-        <span class="motto-dot">.</span>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container hero-layout">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ $home.hero.eyebrow }}</p>
+      <h1 class="hero-title">
+        {{- range $home.hero.title }}<span>{{ . }}.</span>{{ end -}}
       </h1>
       <p class="hero-text">{{ $home.hero.text }}</p>
-      <p class="hero-cta">
-        <a class="btn" href="{{ $home.hero.cta.href }}">{{ $home.hero.cta.label }}</a>
-        <a class="btn btn-ghost" href="#services">{{ i18n "nav_services" }}</a>
-      </p>
+      <div class="hero-actions">
+        <a class="btn" href="{{ $home.hero.primary.href }}">{{ $home.hero.primary.label }}<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+        <a class="btn btn-secondary" href="{{ $home.hero.secondary.href }}">{{ $home.hero.secondary.label }}</a>
+      </div>
+      <ul class="hero-signals" aria-label="{{ $home.hero.signals_label }}">
+        {{ range $home.hero.signals }}<li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>{{ . }}</li>{{ end }}
+      </ul>
     </div>
-    <svg class="hero-visual" viewBox="0 0 400 360" aria-hidden="true" focusable="false">
-      <g class="edges">
-        <path class="edge" d="M200 180 L80 70"/>
-        <path class="edge" d="M200 180 L320 60"/>
-        <path class="edge" d="M200 180 L340 200"/>
-        <path class="edge" d="M200 180 L300 300"/>
-        <path class="edge" d="M200 180 L110 290"/>
-        <path class="edge" d="M200 180 L60 180"/>
-        <path class="edge" d="M80 70 L320 60"/>
-        <path class="edge" d="M340 200 L300 300"/>
-        <path class="edge" d="M110 290 L60 180"/>
-        <path class="flow" d="M80 70 L200 180 L340 200"/>
-        <path class="flow" d="M110 290 L200 180 L320 60"/>
-      </g>
-      <circle class="pulse" cx="200" cy="180" r="34"/>
-      <circle class="pulse" cx="200" cy="180" r="34"/>
-      <circle class="pulse" cx="200" cy="180" r="34"/>
-      <circle class="core" cx="200" cy="180" r="20"/>
-      <circle class="node" cx="80" cy="70" r="11"/>
-      <circle class="node" cx="320" cy="60" r="9"/>
-      <circle class="node" cx="340" cy="200" r="12"/>
-      <circle class="node" cx="300" cy="300" r="9"/>
-      <circle class="node" cx="110" cy="290" r="11"/>
-      <circle class="node" cx="60" cy="180" r="8"/>
-    </svg>
+
+    <aside class="agent-panel" aria-label="{{ $home.hero.workflow.label }}">
+      <header class="agent-panel-head">
+        <span><svg class="icon" aria-hidden="true"><use href="#icon-terminal"></use></svg>{{ $home.hero.workflow.label }}</span>
+        <span class="status"><i></i>{{ $home.hero.workflow.status }}</span>
+      </header>
+      <ol class="agent-flow">
+        {{ range $home.hero.workflow.steps }}
+        <li>
+          <span class="flow-code">{{ .code }}</span>
+          <span><strong>{{ .title }}</strong><small>{{ .text }}</small></span>
+        </li>
+        {{ end }}
+      </ol>
+      <footer class="agent-panel-foot"><span>policy.guardrails</span><span>{{ $home.hero.workflow.footer }}</span></footer>
+    </aside>
+  </div>
+</section>
+
+<section class="proof-strip" aria-label="{{ $home.proof.label }}">
+  <div class="container proof-inner">
+    <p>{{ $home.proof.label }}</p>
+    <div class="proof-items">
+      {{ range $home.proof.items }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}
+    </div>
   </div>
 </section>
 
 <section id="services" class="section">
   <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">{{ $home.services.title }}</h2>
-    </div>
-    <div class="cards cards-services">
+    <header class="section-heading">
+      <div>
+        <p class="section-kicker">{{ $home.services.eyebrow }}</p>
+        <h2>{{ $home.services.title }}</h2>
+      </div>
+      <p>{{ $home.services.intro }}</p>
+    </header>
+    <div class="service-grid">
       {{ range $home.services.items }}
-      <article class="card">
+      <article class="service-card service-{{ .size }}">
+        <header><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#icon-{{ .icon }}"></use></svg></span><span class="card-number">{{ .number }}</span></header>
+        <h3>{{ .name }}</h3>
+        <p>{{ .text }}</p>
+        <ul>{{ range .bullets }}<li>{{ . }}</li>{{ end }}</ul>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="method" class="section section-ruled">
+  <div class="container">
+    <header class="section-heading">
+      <div>
+        <p class="section-kicker">{{ $home.method.eyebrow }}</p>
+        <h2>{{ $home.method.title }}</h2>
+      </div>
+      <p>{{ $home.method.intro }}</p>
+    </header>
+    <ol class="method-grid">
+      {{ range $home.method.steps }}
+      <li><span>{{ .number }}</span><h3>{{ .name }}</h3><p>{{ .text }}</p></li>
+      {{ end }}
+    </ol>
+  </div>
+</section>
+
+<section id="expertise" class="section">
+  <div class="container">
+    <header class="section-heading">
+      <div>
+        <p class="section-kicker">{{ $home.foundation.eyebrow }}</p>
+        <h2>{{ $home.foundation.title }}</h2>
+      </div>
+      <p>{{ $home.foundation.intro }}</p>
+    </header>
+    <div class="capability-grid">
+      {{ range $home.foundation.items }}
+      <article class="capability-card">
+        <svg class="icon" aria-hidden="true"><use href="#icon-{{ .icon }}"></use></svg>
         <h3>{{ .name }}</h3>
         <p>{{ .text }}</p>
       </article>
@@ -63,80 +108,40 @@
   </div>
 </section>
 
-<section id="expertise" class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">{{ $home.expertise.title }}</h2>
+<section id="knowledge" class="section section-ruled">
+  <div class="container knowledge-layout">
+    <div class="knowledge-copy">
+      <p class="section-kicker">{{ $home.knowledge.eyebrow }}</p>
+      <h2>{{ $home.knowledge.title }}</h2>
+      <p>{{ $home.knowledge.text }}</p>
+      <p class="knowledge-note"><svg class="icon" aria-hidden="true"><use href="#icon-shield-check"></use></svg>{{ $home.knowledge.note }}</p>
     </div>
-    {{ range $i, $g := $home.expertise.groups }}
-    <div class="expertise-group{{ if eq $i 0 }} expertise-group-featured{{ end }}">
-      <h3>{{ $g.name }}</h3>
-      <div class="cards">
-        {{ range $g.items }}
-        <article class="card">
-          <h4>{{ .name }}</h4>
-          <p>{{ .text }}</p>
-        </article>
-        {{ end }}
-      </div>
-    </div>
-    {{ end }}
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">{{ $home.values.title }}</h2>
-    </div>
-    <div class="cards">
-      {{ range $home.values.items }}
-      <article class="card card-value">
-        <h3>{{ .name }}</h3>
-        <p>{{ .text }}</p>
-        <blockquote>{{ .quote }}</blockquote>
+    <div class="knowledge-stack">
+      {{ range $home.knowledge.features }}
+      <article>
+        <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#icon-{{ .icon }}"></use></svg></span>
+        <div><h3>{{ .name }}</h3><p>{{ .text }}</p></div>
       </article>
       {{ end }}
     </div>
   </div>
 </section>
 
-<section id="apropos" class="section section-alt">
+<section id="contact" class="section contact-section">
   <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">{{ $home.about.title }}</h2>
-    </div>
-    <div class="about-grid">
-      <div class="prose">
-        {{ range $home.about.paragraphs }}<p>{{ . }}</p>{{ end }}
-      </div>
-      <ul class="points">
-        {{ range $home.about.points }}<li>{{ . }}</li>{{ end }}
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">{{ $home.contact.title }}</h2>
-    </div>
-    <div class="cards contact-cards">
-      <article class="card">
-        <h3>{{ i18n "contact_address" }}</h3>
-        <address>
-          {{ range $site.address }}{{ . }}<br>{{ end }}
-        </address>
-      </article>
-      <article class="card">
-        <h3>{{ i18n "contact_email" }}</h3>
-        <p><a href="mailto:{{ $site.email }}">{{ $site.email }}</a></p>
-      </article>
-    </div>
     <div class="contact-panel">
-      <p>{{ $home.contact.text }}</p>
-      <a class="btn" href="{{ $home.hero.cta.href }}">{{ $home.hero.cta.label }}</a>
+      <div>
+        <p class="section-kicker">{{ $home.contact.eyebrow }}</p>
+        <h2>{{ $home.contact.title }}</h2>
+        <p>{{ $home.contact.text }}</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-light" href="{{ $home.contact.cta.href }}">{{ $home.contact.cta.label }}<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+        <dl>
+          <div><dt>{{ i18n "contact_email" }}</dt><dd><a href="mailto:{{ $site.email }}">{{ $site.email }}</a></dd></div>
+          <div><dt>{{ i18n "contact_location" }}</dt><dd>{{ $home.contact.location }}</dd></div>
+        </dl>
+      </div>
     </div>
   </div>
 </section>

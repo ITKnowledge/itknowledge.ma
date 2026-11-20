@@ -1,21 +1,30 @@
-<header class="site-header">
+<header class="site-header" data-header>
   <div class="container header-inner">
     <a class="brand" href="{{ "/" | relLangURL }}" aria-label="{{ hugo.Data.site.name }}">
-      <img src="{{ hugo.Data.site.logo }}" alt="{{ hugo.Data.site.name }} Maroc" width="180" height="50">
+      <span class="brand-mark" aria-hidden="true"><svg class="icon"><use href="#icon-terminal"></use></svg></span>
+      <span>{{ hugo.Data.site.name }}</span>
     </a>
-    <nav class="site-nav" aria-label="Navigation">
+
+    <nav class="site-nav" id="site-nav" data-menu aria-label="Navigation">
       <a href="{{ "/" | relLangURL }}#services">{{ i18n "nav_services" }}</a>
+      <a href="{{ "/" | relLangURL }}#method">{{ i18n "nav_method" }}</a>
       <a href="{{ "/" | relLangURL }}#expertise">{{ i18n "nav_expertise" }}</a>
-      <a href="{{ "/" | relLangURL }}#apropos">{{ i18n "nav_about" }}</a>
       <a href="{{ "/" | relLangURL }}#contact" class="nav-cta">{{ i18n "nav_contact" }}</a>
       {{ if .IsTranslated }}
       <span class="lang-switch">
-        <span class="lang-current">{{ .Language.Label }}</span>
-        {{ range .Translations }}
-        <a class="lang-link" href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}" aria-label="{{ .Language.Label }}"><span class="lang-long">{{ .Language.Label }}</span><span class="lang-short">{{ .Language.Lang | upper }}</span></a>
-        {{ end }}
+        <span class="lang-current">{{ .Language.Lang | upper }}</span>
+        {{ range .Translations }}<a class="lang-link" href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}" aria-label="{{ .Language.Label }}">{{ .Language.Lang | upper }}</a>{{ end }}
       </span>
       {{ end }}
     </nav>
+
+    <button class="icon-button theme-toggle" type="button" data-theme-toggle data-light-label="{{ i18n `theme_light` }}" data-dark-label="{{ i18n `theme_dark` }}" aria-label="{{ i18n `theme_light` }}">
+      <svg class="icon theme-sun" aria-hidden="true"><use href="#icon-sun"></use></svg>
+      <svg class="icon theme-moon" aria-hidden="true"><use href="#icon-moon"></use></svg>
+    </button>
+    <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="{{ i18n `menu_open` }}">
+      <svg class="icon menu-open" aria-hidden="true"><use href="#icon-menu"></use></svg>
+      <svg class="icon menu-close" aria-hidden="true"><use href="#icon-x"></use></svg>
+    </button>
   </div>
 </header>

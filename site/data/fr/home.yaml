@@ -1,76 +1,111 @@
 hero:
-  kicker: "Notre savoir-faire pour une meilleure"
-  motto: ["Visibilité", "Rendement", "Performance"]
-  text: "ITKnowledge conçoit et déploie des agents IA au service des PME/PMI : automatisation intelligente, assistants métier et intégration à vos systèmes d'information, appuyés par plus de 18 ans d'expertise IT."
-  cta: { label: "Parlons de votre projet", href: "mailto:contact@itknowledge.ma" }
+  eyebrow: "IA agentique · automatisation · ingénierie IT"
+  title: ["Construire", "Apprendre", "Résoudre"]
+  text: "Des agents IA utiles, sécurisés et connectés à vos opérations. Nous transformons vos processus, vos connaissances et votre infrastructure en capacités mesurables, du prototype à la production."
+  primary: { label: "Évaluer un cas d'usage", href: "mailto:contact@itknowledge.ma?subject=Projet%20IA%20agentique" }
+  secondary: { label: "Explorer nos services", href: "#services" }
+  signals_label: "Principes de livraison"
+  signals:
+    - "Agents outillés et contrôlés"
+    - "Intégration sécurisée"
+    - "Résultats traçables"
+  workflow:
+    label: "Flux agentique"
+    status: "Prêt pour la production"
+    footer: "Autorisations · traçabilité · contrôle humain"
+    steps:
+      - { code: "01", title: "Comprendre", text: "Intention, contexte et contraintes" }
+      - { code: "02", title: "Retrouver", text: "Connaissances autorisées et à jour" }
+      - { code: "03", title: "Agir", text: "Outils, API et workflows approuvés" }
+      - { code: "04", title: "Vérifier", text: "Résultat cité, évalué et observable" }
+
+proof:
+  label: "De l'idée à l'exploitation"
+  items:
+    - { value: "18+", label: "années d'expérience IT" }
+    - { value: "P→P", label: "prototype jusqu'à la production" }
+    - { value: "3×", label: "sur site, cloud ou hybride" }
 
 services:
-  title: "Nos services"
+  eyebrow: "Services d'IA agentique"
+  title: "Des agents qui comprennent, décident et agissent dans un cadre maîtrisé."
+  intro: "Chaque service est conçu autour d'un résultat opérationnel, avec sécurité, gouvernance et observabilité intégrées dès le départ."
   items:
-    - name: "Accompagnement"
-      text: "Nous assistons nos clients dans la réalisation des cahiers des charges de leurs projets informatiques."
-    - name: "Intégration"
-      text: "Nous mettons en place l'architecture qui répond aux besoins les plus pointus de nos clients."
-    - name: "Conseil"
-      text: "Nous apportons le meilleur des nouvelles technologies pour satisfaire les nouveaux défis de nos clients."
-    - name: "Assistance"
-      text: "Nous sommes à l'écoute de nos clients pour résoudre leurs problèmes d'exploitation au quotidien."
+    - number: "01"
+      icon: "bot"
+      size: "wide"
+      name: "Agents IA sur mesure"
+      text: "Conception d'agents spécialisés capables de raisonner sur votre contexte métier et d'exécuter des actions contrôlées."
+      bullets: ["Orchestration multi-outils", "Validation humaine selon le risque"]
+    - number: "02"
+      icon: "library"
+      size: "standard"
+      name: "Assistants connaissance & RAG"
+      text: "Réponses fondées sur vos documents, avec sources, droits d'accès et cycle de révision."
+      bullets: ["Recherche sémantique", "Citations vérifiables"]
+    - number: "03"
+      icon: "workflow"
+      size: "standard"
+      name: "Automatisation intelligente"
+      text: "Automatisation des tâches répétitives et des processus transverses sans remplacer vos contrôles."
+      bullets: ["Workflows événementiels", "Intégration aux outils existants"]
+    - number: "04"
+      icon: "activity"
+      size: "wide"
+      name: "IA pour les opérations IT"
+      text: "Agents d'assistance au diagnostic, à la supervision, au traitement des incidents et à l'administration."
+      bullets: ["Triage et corrélation", "Runbooks assistés et auditables"]
+    - number: "05"
+      icon: "plug"
+      size: "wide"
+      name: "Intégration sécurisée"
+      text: "Connexion des agents aux applications, bases de données, API et infrastructures, sur site ou dans le cloud."
+      bullets: ["Identités et moindre privilège", "API, webhooks et MCP"]
+    - number: "06"
+      icon: "shield-check"
+      size: "standard"
+      name: "Évaluation & gouvernance"
+      text: "Mesure de la qualité, maîtrise des risques, coûts, accès et conformité avant la mise en production."
+      bullets: ["Jeux d'évaluation", "Garde-fous et journalisation"]
 
-expertise:
-  title: "Nos domaines d'expertise"
-  groups:
-    - name: "Services d'IA agentique"
-      items:
-        - name: "Agents IA sur mesure"
-          text: "Conception et déploiement d'agents IA autonomes adaptés à vos processus métier, du prototype à la production."
-        - name: "Automatisation intelligente"
-          text: "Automatisation des tâches répétitives et des workflows, pilotée par des agents connectés à vos outils existants."
-        - name: "Assistants métier conversationnels"
-          text: "Des assistants capables de répondre, d'agir et de traiter vos documents dans le langage de vos équipes."
-        - name: "IA pour l'exploitation IT"
-          text: "Supervision augmentée, diagnostic assisté et administration de votre infrastructure par des agents spécialisés."
-        - name: "Conseil et stratégie IA"
-          text: "Identification des cas d'usage à forte valeur, feuille de route IA, gouvernance, sécurité et maîtrise des coûts."
-        - name: "Intégration à vos systèmes"
-          text: "Connexion sécurisée des agents à vos applications, bases de données et API, sur site ou dans le cloud."
-    - name: "Socle infrastructure et support"
-      items:
-        - name: "Sécurité des systèmes d'information"
-          text: "Audits de sécurité, tests de vulnérabilité, pare-feux, protection des postes, segmentation et Zero Trust."
-        - name: "Réseaux et virtualisation"
-          text: "Réseaux d'entreprise, VPN, hyperviseurs, clusters haute disponibilité et conteneurs."
-        - name: "Sauvegarde et continuité"
-          text: "Stratégies de sauvegarde, plans de reprise d'activité, réplication et tests de restauration réguliers."
-        - name: "Systèmes et infogérance"
-          text: "Administration Windows et Linux, messageries collaboratives, supervision et support utilisateurs."
+method:
+  eyebrow: "Méthode de livraison"
+  title: "Un chemin court vers une valeur démontrable."
+  intro: "Nous réduisons le risque par étapes, avec des critères de réussite explicites et une architecture exploitable par vos équipes."
+  steps:
+    - { number: "01", name: "Cadrer", text: "Prioriser le cas d'usage, les utilisateurs, les données, les risques et la valeur attendue." }
+    - { number: "02", name: "Prouver", text: "Construire un prototype sur un périmètre réel et mesurer précision, utilité et coût." }
+    - { number: "03", name: "Intégrer", text: "Connecter identités, connaissances, outils et contrôles dans votre environnement." }
+    - { number: "04", name: "Opérer", text: "Déployer, observer, évaluer et améliorer avec des responsabilités clairement définies." }
 
-values:
-  title: "Notre devise"
+foundation:
+  eyebrow: "Socle technique"
+  title: "L'expertise nécessaire autour de l'agent."
+  intro: "Un agent fiable dépend de systèmes, réseaux, données et opérations fiables. Nous pouvons intervenir sur l'ensemble de ce socle."
   items:
-    - name: "Performance"
-      text: "En assurant un bon suivi de votre système d'information."
-      quote: "Nous aidons nos clients à faire un saut de la performance à l'excellence."
-    - name: "Rendement"
-      text: "À travers une prise en main de votre système d'information."
-      quote: "Notre expertise vous donne un allié pour un rendement maximal."
-    - name: "Visibilité"
-      text: "Votre système d'information entre de bonnes mains."
-      quote: "Avec un reporting régulier, jouissez d'une visibilité sur l'évolution de votre SI."
+    - { icon: "server", name: "Infrastructure & virtualisation", text: "Architecture, systèmes, hyperviseurs, conteneurs et haute disponibilité." }
+    - { icon: "network", name: "Réseaux & connectivité", text: "LAN, WAN, VPN, routage, segmentation et connectivité hybride." }
+    - { icon: "shield-check", name: "Cybersécurité & Zero Trust", text: "Audit, durcissement, vulnérabilités, pare-feux, identités et contrôle d'accès." }
+    - { icon: "cloud", name: "Cloud & DevOps", text: "Infrastructure as code, CI/CD, plateformes cloud et exploitation automatisée." }
+    - { icon: "code", name: "Logiciels, API & intégration", text: "Services web, API, données et intégrations maintenables." }
+    - { icon: "radar", name: "Observabilité & supervision", text: "Métriques, journaux, traces, alertes utiles et objectifs de service." }
+    - { icon: "database", name: "Sauvegarde & continuité", text: "Stratégies de sauvegarde, réplication, reprise et tests de restauration." }
+    - { icon: "life-buoy", name: "Exploitation & diagnostic", text: "Incidents, problèmes, RCA, runbooks, support et amélioration continue." }
 
-about:
-  title: "Qui sommes-nous ?"
-  paragraphs:
-    - "Basée à Casablanca, ITKnowledge est le résultat de l'union d'une équipe d'experts, tant à l'échelle nationale qu'internationale, dans le domaine des nouvelles technologies digitales."
-    - "Nous nous positionnons comme un centre de compétences en matière de développements orientés services web et mobiles."
-    - "L'ensemble de ces atouts nous permet l'optimisation d'un avantage compétitif précieux au service de nos partenaires."
-  points:
-    - "Un capital de plus de 10 ans d'expérience dans les NTIC, le déploiement commercial et marketing."
-    - "Une équipe d'ingénieurs talentueux, encadrée par des consultants seniors confirmés de haut niveau."
-    - "La formation et le conseil dans le domaine des technologies du web marketing."
-    - "La réalisation de solutions dédiées aux sites web, au web mobile et aux réseaux sociaux."
-    - "Le référencement et l'animation active et dynamique des sites web."
-    - "Le développement de solutions de sécurité des données sur Internet, de sites web et d'applications web."
+knowledge:
+  eyebrow: "Connaissance prête pour l'IA"
+  title: "Des connaissances exploitables par vos équipes et vos agents."
+  text: "Nous structurons la documentation technique pour qu'elle reste utile, gouvernée et consommable aussi bien par les humains que par les systèmes d'IA."
+  note: "Les agents respectent les mêmes autorisations et niveaux de classification que les utilisateurs."
+  features:
+    - { icon: "book", name: "Contenu gouverné", text: "Propriétaire, statut, classification, version et date de révision pour chaque contenu." }
+    - { icon: "search", name: "Recherche sémantique", text: "RAG et réponses avec citations, filtrés selon le contexte et les droits." }
+    - { icon: "plug", name: "Accès API & MCP", text: "Une architecture API-first pour les portails, automatisations et agents." }
+    - { icon: "scale", name: "Contrôle & audit", text: "Approbations, historique, traçabilité et observabilité de la consommation." }
 
 contact:
-  title: "Contactez-nous"
-  text: "Une question, un projet ? Écrivez-nous directement."
+  eyebrow: "Parlons du prochain cas d'usage"
+  title: "Un processus à améliorer ? Commençons par le rendre mesurable."
+  text: "Décrivez le résultat attendu, les outils concernés et la contrainte principale. Nous vous répondrons avec une première approche concrète."
+  cta: { label: "Démarrer la discussion", href: "mailto:contact@itknowledge.ma?subject=Projet%20IA%20agentique" }
+  location: "Casablanca, Maroc"

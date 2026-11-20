@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang | default `fr` }}">
+<html lang="{{ .Site.Language.Lang | default `fr` }}" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
   <link rel="canonical" href="{{ .Permalink }}">
@@ -11,10 +12,13 @@
   <meta property="og:description" content="{{ .Site.Params.description }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="{{ hugo.Data.site.logo | absURL }}">
-  <meta property="og:locale" content="fr_MA">
-  <meta name="theme-color" content="#334e8d">
+  <meta property="og:locale" content="{{ if eq .Site.Language.Lang `fr` }}fr_MA{{ else }}en_US{{ end }}">
+  <meta name="theme-color" content="#08090d">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link type="text/plain" rel="author" href="/humans.txt">
   {{ $org := dict
@@ -33,6 +37,7 @@
   <script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
 </head>
 <body>
+  {{ partial "icon-sprite.html" . }}
   <a class="skip-link" href="#main">{{ if eq .Site.Language.Lang "fr" }}Aller au contenu{{ else }}Skip to content{{ end }}</a>
   {{ partial "site-header.html" . }}
   <main id="main">

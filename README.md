@@ -12,9 +12,9 @@ site/                 Projet Hugo
   data/fr/home.yaml   Contenus de la page d'accueil (français)
   data/en/home.yaml   Contenus de la page d'accueil (anglais)
   i18n/               Libellés d'interface (navigation, contact, 404)
-  layouts/            Gabarits (page unique, 404, header/footer)
-  assets/css/         Feuille de style (minifiée + fingerprintée par Hugo)
-  static/             Logo, favicon, humans.txt et robots.txt
+  layouts/            Gabarits (accueil, 404, composants d'en-tête, pied et icônes)
+  assets/css/         Système visuel sombre/clair, responsive, minifié et fingerprinté
+  assets/js/          Persistance du thème et navigation mobile, sans dépendance
 archive/              Miroir figé de l'ancien site (version 2017) — référence, ne pas modifier
 deploy/               Scripts de déploiement
 docs/               Documents de conception
@@ -36,7 +36,7 @@ hugo --source site --gc --minify     # sortie : site/public/
 ## Modifier le contenu
 
 - Textes de la page : `site/data/fr/home.yaml` et `site/data/en/home.yaml`
-  (hero, services, expertise, devise, à propos, contact).
+  (hero, services IA agentique, méthode, socle technique, connaissance et contact).
 - Coordonnées : `site/data/site.yaml`.
 - Libellés d'interface : `site/i18n/fr.toml`, `site/i18n/en.toml`.
 
@@ -62,10 +62,12 @@ deploy/cloudflare-pages.sh
 Puis attacher le domaine `www.itknowledge.ma` (et `itknowledge.ma` en redirection)
 au projet Pages.
 
-## Différences avec l'ancien site (2017)
+## Principes de la refonte
 
-- Refonte complète : une page, responsive, sans dépendance JS, sans framework CSS.
-- Trackers supprimés : Google Tag Manager, Drift, Olark, SumoMe, Segment.
-- Widget Twitter supprimé (liens simples conservés).
-- Contenus éditorialisés : focus sur les services d'IA agentique.
-- Aucun nom de personne ni de fournisseur dans les sections publiques.
+- Site vitrine bilingue, responsive et sombre par défaut, avec thème clair persistant.
+- Focus éditorial sur les services d'IA agentique et les capacités techniques livrables.
+- Interface sans framework ni dépendance JavaScript d'exécution.
+- Ressources CSS et JS minifiées et fingerprintées par Hugo.
+- Trackers, téléphones et liens sociaux supprimés.
+- Aucun nom de personne ou de fournisseur dans les sections publiques.
+- `humans.txt` reste disponible sans lien visible dans le pied de page.

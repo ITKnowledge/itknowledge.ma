@@ -1,76 +1,111 @@
 hero:
-  kicker: "Our know-how for better"
-  motto: ["Visibility", "Efficiency", "Performance"]
-  text: "ITKnowledge designs and deploys AI agents for SMBs: intelligent automation, business assistants and integration with your information systems, backed by more than 18 years of IT expertise."
-  cta: { label: "Let's talk about your project", href: "mailto:contact@itknowledge.ma" }
+  eyebrow: "Agentic AI · automation · IT engineering"
+  title: ["Build", "Learn", "Solve"]
+  text: "Useful, secure AI agents connected to your operations. We turn processes, knowledge and infrastructure into measurable capabilities—from prototype to production."
+  primary: { label: "Assess a use case", href: "mailto:contact@itknowledge.ma?subject=Agentic%20AI%20project" }
+  secondary: { label: "Explore our services", href: "#services" }
+  signals_label: "Delivery principles"
+  signals:
+    - "Tool-enabled, controlled agents"
+    - "Secure integration"
+    - "Traceable outcomes"
+  workflow:
+    label: "Agentic workflow"
+    status: "Production ready"
+    footer: "Authorization · traceability · human control"
+    steps:
+      - { code: "01", title: "Understand", text: "Intent, context and constraints" }
+      - { code: "02", title: "Retrieve", text: "Authorized, current knowledge" }
+      - { code: "03", title: "Act", text: "Approved tools, APIs and workflows" }
+      - { code: "04", title: "Verify", text: "Cited, evaluated, observable output" }
+
+proof:
+  label: "From idea to operations"
+  items:
+    - { value: "18+", label: "years of IT experience" }
+    - { value: "P→P", label: "prototype through production" }
+    - { value: "3×", label: "on-premises, cloud or hybrid" }
 
 services:
-  title: "Our services"
+  eyebrow: "Agentic AI services"
+  title: "Agents that understand, decide and act within controlled boundaries."
+  intro: "Every service is designed around an operational outcome, with security, governance and observability built in from the start."
   items:
-    - name: "Guidance"
-      text: "We assist our clients in writing the specifications for their IT projects."
-    - name: "Integration"
-      text: "We implement the architecture that meets our clients' most demanding needs."
-    - name: "Consulting"
-      text: "We bring the best of new technologies to meet our clients' new challenges."
-    - name: "Assistance"
-      text: "We listen to our clients to solve their day-to-day operations problems."
+    - number: "01"
+      icon: "bot"
+      size: "wide"
+      name: "Custom AI agents"
+      text: "Design of specialized agents that reason over your business context and execute controlled actions."
+      bullets: ["Multi-tool orchestration", "Risk-based human approval"]
+    - number: "02"
+      icon: "library"
+      size: "standard"
+      name: "Knowledge & RAG assistants"
+      text: "Answers grounded in your documents, with sources, access rights and review schedules."
+      bullets: ["Semantic retrieval", "Verifiable citations"]
+    - number: "03"
+      icon: "workflow"
+      size: "standard"
+      name: "Intelligent automation"
+      text: "Automation of repetitive work and cross-system processes without removing your controls."
+      bullets: ["Event-driven workflows", "Existing-tool integration"]
+    - number: "04"
+      icon: "activity"
+      size: "wide"
+      name: "AI for IT operations"
+      text: "Agents that assist diagnostics, monitoring, incident handling and infrastructure administration."
+      bullets: ["Triage and correlation", "Auditable assisted runbooks"]
+    - number: "05"
+      icon: "plug"
+      size: "wide"
+      name: "Secure integration"
+      text: "Connect agents to applications, databases, APIs and infrastructure, on-premises or in the cloud."
+      bullets: ["Identity and least privilege", "APIs, webhooks and MCP"]
+    - number: "06"
+      icon: "shield-check"
+      size: "standard"
+      name: "Evaluation & governance"
+      text: "Measure quality and control risk, cost, access and compliance before production."
+      bullets: ["Evaluation suites", "Guardrails and audit logs"]
 
-expertise:
-  title: "Our areas of expertise"
-  groups:
-    - name: "AI agentic services"
-      items:
-        - name: "Custom AI agents"
-          text: "Design and deployment of autonomous AI agents tailored to your business processes, from prototype to production."
-        - name: "Intelligent automation"
-          text: "Automation of repetitive tasks and workflows, driven by agents connected to your existing tools."
-        - name: "Conversational business assistants"
-          text: "Assistants that answer, act and process your documents in your teams' own language."
-        - name: "AI for IT operations"
-          text: "Augmented monitoring, assisted diagnosis and infrastructure administration by specialized agents."
-        - name: "AI strategy and consulting"
-          text: "Identification of high-value use cases, AI roadmaps, governance, security and cost control."
-        - name: "Integration with your systems"
-          text: "Secure connection of agents to your applications, databases and APIs, on-premises or in the cloud."
-    - name: "Infrastructure and support foundation"
-      items:
-        - name: "Information systems security"
-          text: "Security audits, vulnerability testing, firewalls, endpoint protection, segmentation and Zero Trust."
-        - name: "Networks and virtualization"
-          text: "Enterprise networks, VPNs, hypervisors, high-availability clusters and containers."
-        - name: "Backup and continuity"
-          text: "Backup strategies, disaster recovery plans, replication and regular restore testing."
-        - name: "Systems and managed services"
-          text: "Windows and Linux administration, collaborative messaging, monitoring and user support."
+method:
+  eyebrow: "Delivery method"
+  title: "A short path to demonstrable value."
+  intro: "We reduce risk in stages, with explicit success criteria and an architecture your teams can operate."
+  steps:
+    - { number: "01", name: "Frame", text: "Prioritize the use case, users, data, risks and expected value." }
+    - { number: "02", name: "Prove", text: "Build a prototype on a real scope and measure accuracy, usefulness and cost." }
+    - { number: "03", name: "Integrate", text: "Connect identities, knowledge, tools and controls in your environment." }
+    - { number: "04", name: "Operate", text: "Deploy, observe, evaluate and improve with clear ownership." }
 
-values:
-  title: "Our motto"
+foundation:
+  eyebrow: "Technical foundation"
+  title: "The expertise required around the agent."
+  intro: "Reliable agents depend on reliable systems, networks, data and operations. We can assist across that complete foundation."
   items:
-    - name: "Performance"
-      text: "By ensuring proper monitoring of your information system."
-      quote: "We help our clients take the leap from performance to excellence."
-    - name: "Efficiency"
-      text: "Through hands-on management of your information system."
-      quote: "Our expertise gives you an ally for maximum efficiency."
-    - name: "Visibility"
-      text: "Your information system is in good hands."
-      quote: "With regular reporting, enjoy clear visibility into the evolution of your IS."
+    - { icon: "server", name: "Infrastructure & virtualization", text: "Architecture, systems, hypervisors, containers and high availability." }
+    - { icon: "network", name: "Networking & connectivity", text: "LAN, WAN, VPN, routing, segmentation and hybrid connectivity." }
+    - { icon: "shield-check", name: "Cybersecurity & Zero Trust", text: "Audit, hardening, vulnerabilities, firewalls, identity and access control." }
+    - { icon: "cloud", name: "Cloud & DevOps", text: "Infrastructure as code, CI/CD, cloud platforms and automated operations." }
+    - { icon: "code", name: "Software, APIs & integration", text: "Web services, APIs, data and maintainable system integration." }
+    - { icon: "radar", name: "Observability & monitoring", text: "Metrics, logs, traces, useful alerts and service objectives." }
+    - { icon: "database", name: "Backup & continuity", text: "Backup strategy, replication, recovery and restore testing." }
+    - { icon: "life-buoy", name: "Operations & troubleshooting", text: "Incidents, problems, RCA, runbooks, support and continuous improvement." }
 
-about:
-  title: "Who are we?"
-  paragraphs:
-    - "Based in Casablanca, ITKnowledge is the result of the union of a team of experts, both national and international, in the field of new digital technologies."
-    - "We position ourselves as a center of expertise for web- and mobile-oriented service development."
-    - "All of these assets allow us to optimize a valuable competitive advantage for our partners."
-  points:
-    - "More than 10 years of experience in ICT, commercial deployment and marketing."
-    - "A team of talented engineers, supervised by seasoned senior consultants."
-    - "Training and consulting in web marketing technologies."
-    - "Dedicated solutions for websites, mobile web and social networks."
-    - "SEO and active, dynamic website management."
-    - "Data security solutions for the Internet, websites and web applications."
+knowledge:
+  eyebrow: "AI-ready knowledge"
+  title: "Knowledge your teams and agents can put to work."
+  text: "We structure technical documentation so it remains useful, governed and consumable by both humans and AI systems."
+  note: "Agents respect the same authorization and document classification rules as human users."
+  features:
+    - { icon: "book", name: "Governed content", text: "Owner, status, classification, version and review date for every document." }
+    - { icon: "search", name: "Semantic search", text: "RAG and cited answers filtered by context and authorization." }
+    - { icon: "plug", name: "API & MCP access", text: "An API-first architecture for portals, automation and agents." }
+    - { icon: "scale", name: "Control & audit", text: "Approvals, history, traceability and consumption observability." }
 
 contact:
-  title: "Contact us"
-  text: "A question, a project? Write to us directly."
+  eyebrow: "Discuss the next use case"
+  title: "A process to improve? Start by making it measurable."
+  text: "Describe the expected outcome, the systems involved and the main constraint. We will respond with a concrete first approach."
+  cta: { label: "Start the conversation", href: "mailto:contact@itknowledge.ma?subject=Agentic%20AI%20project" }
+  location: "Casablanca, Morocco"

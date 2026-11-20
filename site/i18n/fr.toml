@@ -1,20 +1,32 @@
 [nav_services]
 other = "Services"
 
-[nav_expertise]
-other = "Expertise"
+[nav_method]
+other = "Méthode"
 
-[nav_about]
-other = "À propos"
+[nav_expertise]
+other = "Capacités"
 
 [nav_contact]
 other = "Contact"
 
-[contact_address]
-other = "Adresse"
+[theme_light]
+other = "Activer le thème clair"
+
+[theme_dark]
+other = "Activer le thème sombre"
+
+[menu_open]
+other = "Ouvrir le menu"
 
 [contact_email]
 other = "Email"
+
+[contact_location]
+other = "Localisation"
+
+[footer_note]
+other = "Services d'IA agentique · Casablanca, Maroc"
 
 [notfound_title]
 other = "404 — Page introuvable"
