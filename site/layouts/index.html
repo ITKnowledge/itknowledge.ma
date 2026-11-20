@@ -130,12 +130,6 @@
         </address>
       </article>
       <article class="card">
-        <h3>{{ i18n "contact_phone" }}</h3>
-        {{ range $site.phones }}
-        <p class="phone"><a href="tel:{{ .tel }}">{{ .number }}</a></p>
-        {{ end }}
-      </article>
-      <article class="card">
         <h3>{{ i18n "contact_email" }}</h3>
         <p><a href="mailto:{{ $site.email }}">{{ $site.email }}</a></p>
       </article>

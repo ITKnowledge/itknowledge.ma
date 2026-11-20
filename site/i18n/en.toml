@@ -13,9 +13,6 @@ other = "Contact"
 [contact_address]
 other = "Address"
 
-[contact_phone]
-other = "Phone"
-
 [contact_email]
 other = "Email"
 

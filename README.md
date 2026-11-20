@@ -8,7 +8,7 @@ statique, construit avec [Hugo](https://gohugo.io/), déployé sur Cloudflare Pa
 ```
 site/                 Projet Hugo
   hugo.toml           Configuration (langues, paramètres SEO)
-  data/site.yaml      Identité : logo, email, adresse, téléphones, réseaux sociaux
+  data/site.yaml      Identité : logo, email, adresse, réseaux sociaux
   data/fr/home.yaml   Contenus de la page d'accueil (français)
   data/en/home.yaml   Contenus de la page d'accueil (anglais)
   i18n/               Libellés d'interface (navigation, contact, 404)
