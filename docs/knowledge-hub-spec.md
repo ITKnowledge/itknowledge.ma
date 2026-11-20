@@ -2,8 +2,10 @@
 
 > Spécification reçue du propriétaire le 2026-11-20. Élément de feuille de route
 > du projet itknowledge.ma — non implémenté dans le site vitrine actuel.
-> Décisions en attente : rattachement au site (hub.itknowledge.ma ?), périmètre
-> (outil interne ITK vs produit pour clients), socle technique.
+> **Décision du propriétaire (2026-11-20) : mis en pause.** À reprendre après le
+> déploiement du site. Socle choisi d'avance : développement sur mesure API-first
+> en Go (SQLite/Postgres + UI web + endpoint MCP), par étapes — modèle de contenu
+> et authentification d'abord, gouvernance ensuite.
 
 ## Objective
 
