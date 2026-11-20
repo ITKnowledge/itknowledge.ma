@@ -34,6 +34,7 @@
   <script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">{{ if eq .Site.Language.Lang "fr" }}Aller au contenu{{ else }}Skip to content{{ end }}</a>
   {{ partial "site-header.html" . }}
   <main id="main">
     {{ block "main" . }}{{ end }}

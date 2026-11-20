@@ -4,23 +4,55 @@
 {{ $site := hugo.Data.site }}
 
 <section class="hero">
-  <div class="container">
-    <p class="hero-kicker">{{ $home.hero.kicker }}</p>
-    <h1 class="hero-motto">
-      {{- range $i, $w := $home.hero.motto -}}
-        {{ if $i }}<span class="motto-sep">, </span>{{ end }}<span class="motto-word">{{ $w }}</span>
-      {{- end -}}
-      <span class="motto-dot">.</span>
-    </h1>
-    <p class="hero-text">{{ $home.hero.text }}</p>
-    <p class="hero-cta"><a class="btn" href="{{ $home.hero.cta.href }}">{{ $home.hero.cta.label }}</a></p>
+  <div class="container hero-inner">
+    <div>
+      <p class="hero-kicker">{{ $home.hero.kicker }}</p>
+      <h1 class="hero-motto">
+        {{- range $i, $w := $home.hero.motto -}}
+          {{ if $i }}<span class="motto-sep">, </span>{{ end }}<span class="motto-word">{{ $w }}</span>
+        {{- end -}}
+        <span class="motto-dot">.</span>
+      </h1>
+      <p class="hero-text">{{ $home.hero.text }}</p>
+      <p class="hero-cta">
+        <a class="btn" href="{{ $home.hero.cta.href }}">{{ $home.hero.cta.label }}</a>
+        <a class="btn btn-ghost" href="#services">{{ i18n "nav_services" }}</a>
+      </p>
+    </div>
+    <svg class="hero-visual" viewBox="0 0 400 360" aria-hidden="true" focusable="false">
+      <g class="edges">
+        <path class="edge" d="M200 180 L80 70"/>
+        <path class="edge" d="M200 180 L320 60"/>
+        <path class="edge" d="M200 180 L340 200"/>
+        <path class="edge" d="M200 180 L300 300"/>
+        <path class="edge" d="M200 180 L110 290"/>
+        <path class="edge" d="M200 180 L60 180"/>
+        <path class="edge" d="M80 70 L320 60"/>
+        <path class="edge" d="M340 200 L300 300"/>
+        <path class="edge" d="M110 290 L60 180"/>
+        <path class="flow" d="M80 70 L200 180 L340 200"/>
+        <path class="flow" d="M110 290 L200 180 L320 60"/>
+      </g>
+      <circle class="pulse" cx="200" cy="180" r="34"/>
+      <circle class="pulse" cx="200" cy="180" r="34"/>
+      <circle class="pulse" cx="200" cy="180" r="34"/>
+      <circle class="core" cx="200" cy="180" r="20"/>
+      <circle class="node" cx="80" cy="70" r="11"/>
+      <circle class="node" cx="320" cy="60" r="9"/>
+      <circle class="node" cx="340" cy="200" r="12"/>
+      <circle class="node" cx="300" cy="300" r="9"/>
+      <circle class="node" cx="110" cy="290" r="11"/>
+      <circle class="node" cx="60" cy="180" r="8"/>
+    </svg>
   </div>
 </section>
 
 <section id="services" class="section">
   <div class="container">
-    <h2 class="section-title">{{ $home.services.title }}</h2>
-    <div class="cards">
+    <div class="section-head">
+      <h2 class="section-title">{{ $home.services.title }}</h2>
+    </div>
+    <div class="cards cards-services">
       {{ range $home.services.items }}
       <article class="card">
         <h3>{{ .name }}</h3>
@@ -33,16 +65,20 @@
 
 <section id="expertise" class="section section-alt">
   <div class="container">
-    <h2 class="section-title">{{ $home.expertise.title }}</h2>
-    {{ range $home.expertise.groups }}
-    <h3 class="expertise-group">{{ .name }}</h3>
-    <div class="cards">
-      {{ range .items }}
-      <article class="card">
-        <h4>{{ .name }}</h4>
-        <p>{{ .text }}</p>
-      </article>
-      {{ end }}
+    <div class="section-head">
+      <h2 class="section-title">{{ $home.expertise.title }}</h2>
+    </div>
+    {{ range $i, $g := $home.expertise.groups }}
+    <div class="expertise-group{{ if eq $i 0 }} expertise-group-featured{{ end }}">
+      <h3>{{ $g.name }}</h3>
+      <div class="cards">
+        {{ range $g.items }}
+        <article class="card">
+          <h4>{{ .name }}</h4>
+          <p>{{ .text }}</p>
+        </article>
+        {{ end }}
+      </div>
     </div>
     {{ end }}
   </div>
@@ -50,7 +86,9 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">{{ $home.values.title }}</h2>
+    <div class="section-head">
+      <h2 class="section-title">{{ $home.values.title }}</h2>
+    </div>
     <div class="cards">
       {{ range $home.values.items }}
       <article class="card card-value">
@@ -64,19 +102,26 @@
 </section>
 
 <section id="apropos" class="section section-alt">
-  <div class="container prose">
-    <h2 class="section-title">{{ $home.about.title }}</h2>
-    {{ range $home.about.paragraphs }}<p>{{ . }}</p>{{ end }}
-    <ul>
-      {{ range $home.about.points }}<li>{{ . }}</li>{{ end }}
-    </ul>
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">{{ $home.about.title }}</h2>
+    </div>
+    <div class="about-grid">
+      <div class="prose">
+        {{ range $home.about.paragraphs }}<p>{{ . }}</p>{{ end }}
+      </div>
+      <ul class="points">
+        {{ range $home.about.points }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
   </div>
 </section>
 
 <section id="contact" class="section">
   <div class="container">
-    <h2 class="section-title">{{ $home.contact.title }}</h2>
-    <p class="section-lead">{{ $home.contact.text }}</p>
+    <div class="section-head">
+      <h2 class="section-title">{{ $home.contact.title }}</h2>
+    </div>
     <div class="cards contact-cards">
       <article class="card">
         <h3>{{ i18n "contact_address" }}</h3>
@@ -94,6 +139,10 @@
         <h3>{{ i18n "contact_email" }}</h3>
         <p><a href="mailto:{{ $site.email }}">{{ $site.email }}</a></p>
       </article>
+    </div>
+    <div class="contact-panel">
+      <p>{{ $home.contact.text }}</p>
+      <a class="btn" href="{{ $home.hero.cta.href }}">{{ $home.hero.cta.label }}</a>
     </div>
   </div>
 </section>

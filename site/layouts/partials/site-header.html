@@ -12,7 +12,7 @@
       <span class="lang-switch">
         <span class="lang-current">{{ .Language.Label }}</span>
         {{ range .Translations }}
-        <a class="lang-link" href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}">{{ .Language.Label }}</a>
+        <a class="lang-link" href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}" aria-label="{{ .Language.Label }}"><span class="lang-long">{{ .Language.Label }}</span><span class="lang-short">{{ .Language.Lang | upper }}</span></a>
         {{ end }}
       </span>
       {{ end }}
