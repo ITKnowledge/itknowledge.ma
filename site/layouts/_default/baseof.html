@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default `fr` }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ .Site.Title }}">
+  <meta property="og:description" content="{{ .Site.Params.description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ hugo.Data.site.logo | absURL }}">
+  <meta property="og:locale" content="fr_MA">
+  <meta name="theme-color" content="#334e8d">
+  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link type="text/plain" rel="author" href="/humans.txt">
+  {{ $org := dict
+    "@context" "https://schema.org"
+    "@type" "Organization"
+    "name" (printf "%s Maroc" hugo.Data.site.name)
+    "url" .Site.BaseURL
+    "logo" (hugo.Data.site.logo | absURL)
+    "email" hugo.Data.site.email
+    "address" (dict
+      "@type" "PostalAddress"
+      "streetAddress" (index hugo.Data.site.address 0)
+      "addressLocality" "Casablanca"
+      "addressCountry" "MA")
+    "sameAs" (slice hugo.Data.site.social.facebook hugo.Data.site.social.twitter)
+  }}
+  <script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+</head>
+<body>
+  {{ partial "site-header.html" . }}
+  <main id="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "site-footer.html" . }}
+</body>
+</html>

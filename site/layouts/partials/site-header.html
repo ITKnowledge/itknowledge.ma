@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ "/" | relLangURL }}" aria-label="{{ hugo.Data.site.name }}">
+      <img src="{{ hugo.Data.site.logo }}" alt="{{ hugo.Data.site.name }} Maroc" width="180" height="50">
+    </a>
+    <nav class="site-nav" aria-label="Navigation">
+      <a href="{{ "/" | relLangURL }}#services">{{ i18n "nav_services" }}</a>
+      <a href="{{ "/" | relLangURL }}#expertise">{{ i18n "nav_expertise" }}</a>
+      <a href="{{ "/" | relLangURL }}#apropos">{{ i18n "nav_about" }}</a>
+      <a href="{{ "/" | relLangURL }}#contact" class="nav-cta">{{ i18n "nav_contact" }}</a>
+      {{ if .IsTranslated }}
+      <span class="lang-switch">
+        <span class="lang-current">{{ .Language.Label }}</span>
+        {{ range .Translations }}
+        <a class="lang-link" href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}">{{ .Language.Label }}</a>
+        {{ end }}
+      </span>
+      {{ end }}
+    </nav>
+  </div>
+</header>

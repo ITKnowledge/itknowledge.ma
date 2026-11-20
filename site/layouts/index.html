@@ -1,0 +1,100 @@
+{{ define "title" }}{{ .Site.Title }} — {{ .Site.Params.tagline }}{{ end }}
+{{ define "main" }}
+{{ $home := index (index hugo.Data .Site.Language.Lang) "home" }}
+{{ $site := hugo.Data.site }}
+
+<section class="hero">
+  <div class="container">
+    <p class="hero-kicker">{{ $home.hero.kicker }}</p>
+    <h1 class="hero-motto">
+      {{- range $i, $w := $home.hero.motto -}}
+        {{ if $i }}<span class="motto-sep">, </span>{{ end }}<span class="motto-word">{{ $w }}</span>
+      {{- end -}}
+      <span class="motto-dot">.</span>
+    </h1>
+    <p class="hero-text">{{ $home.hero.text }}</p>
+    <p class="hero-cta"><a class="btn" href="{{ $home.hero.cta.href }}">{{ $home.hero.cta.label }}</a></p>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h2 class="section-title">{{ $home.services.title }}</h2>
+    <div class="cards">
+      {{ range $home.services.items }}
+      <article class="card">
+        <h3>{{ .name }}</h3>
+        <p>{{ .text }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="expertise" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">{{ $home.expertise.title }}</h2>
+    {{ range $home.expertise.groups }}
+    <h3 class="expertise-group">{{ .name }}</h3>
+    <div class="cards">
+      {{ range .items }}
+      <article class="card">
+        <h4>{{ .name }}</h4>
+        <p>{{ .text }}</p>
+      </article>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">{{ $home.values.title }}</h2>
+    <div class="cards">
+      {{ range $home.values.items }}
+      <article class="card card-value">
+        <h3>{{ .name }}</h3>
+        <p>{{ .text }}</p>
+        <blockquote>{{ .quote }}</blockquote>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="apropos" class="section section-alt">
+  <div class="container prose">
+    <h2 class="section-title">{{ $home.about.title }}</h2>
+    {{ range $home.about.paragraphs }}<p>{{ . }}</p>{{ end }}
+    <ul>
+      {{ range $home.about.points }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">{{ $home.contact.title }}</h2>
+    <p class="section-lead">{{ $home.contact.text }}</p>
+    <div class="cards contact-cards">
+      <article class="card">
+        <h3>{{ i18n "contact_address" }}</h3>
+        <address>
+          {{ range $site.address }}{{ . }}<br>{{ end }}
+        </address>
+      </article>
+      <article class="card">
+        <h3>{{ i18n "contact_phone" }}</h3>
+        {{ range $site.phones }}
+        <p class="phone"><a href="tel:{{ .tel }}">{{ .number }}</a></p>
+        {{ end }}
+      </article>
+      <article class="card">
+        <h3>{{ i18n "contact_email" }}</h3>
+        <p><a href="mailto:{{ $site.email }}">{{ $site.email }}</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+{{ end }}

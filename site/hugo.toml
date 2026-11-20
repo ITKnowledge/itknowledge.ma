@@ -1,0 +1,23 @@
+baseURL = "https://www.itknowledge.ma/"
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+disableKinds = ["taxonomy", "term"]
+
+[languages]
+  [languages.fr]
+    label = "Français"
+    locale = "fr"
+    weight = 1
+    title = "ITKnowledge Maroc"
+    [languages.fr.params]
+      tagline = "Agents IA, intégration et accompagnement en systèmes d'information"
+      description = "ITKnowledge conçoit et déploie des agents IA pour les PME/PMI marocaines : automatisation intelligente, assistants métier, intégration aux systèmes d'information. Casablanca, Maroc."
+
+  [languages.en]
+    label = "English"
+    locale = "en"
+    weight = 2
+    title = "ITKnowledge Morocco"
+    [languages.en.params]
+      tagline = "AI agents, systems integration and guidance"
+      description = "ITKnowledge designs and deploys AI agents for Moroccan SMBs: intelligent automation, business assistants, information systems integration. Casablanca, Morocco."

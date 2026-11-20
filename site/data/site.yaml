@@ -1,0 +1,12 @@
+name: ITKnowledge
+logo: /img/logoitknowledgesmall.png
+email: contact@itknowledge.ma
+address:
+  - "Groupe ATTAKKADDOUM GH2-17, 2ème Étage"
+  - "Sidi Bernoussi, Casablanca, Maroc"
+phones:
+  - { number: "+212 6 61 19 94 69", tel: "+212661199469" }
+  - { number: "+212 6 61 21 17 81", tel: "+212661211781" }
+social:
+  facebook: "https://www.facebook.com/ITKnowledgeMaroc"
+  twitter: "https://twitter.com/ITKnowledgeMA"

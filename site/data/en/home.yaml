@@ -1,0 +1,76 @@
+hero:
+  kicker: "Our know-how for better"
+  motto: ["Visibility", "Efficiency", "Performance"]
+  text: "ITKnowledge designs and deploys AI agents for SMBs: intelligent automation, business assistants and integration with your information systems, backed by more than 18 years of IT expertise."
+  cta: { label: "Let's talk about your project", href: "mailto:contact@itknowledge.ma" }
+
+services:
+  title: "Our services"
+  items:
+    - name: "Guidance"
+      text: "We assist our clients in writing the specifications for their IT projects."
+    - name: "Integration"
+      text: "We implement the architecture that meets our clients' most demanding needs."
+    - name: "Consulting"
+      text: "We bring the best of new technologies to meet our clients' new challenges."
+    - name: "Assistance"
+      text: "We listen to our clients to solve their day-to-day operations problems."
+
+expertise:
+  title: "Our areas of expertise"
+  groups:
+    - name: "AI agentic services"
+      items:
+        - name: "Custom AI agents"
+          text: "Design and deployment of autonomous AI agents tailored to your business processes, from prototype to production."
+        - name: "Intelligent automation"
+          text: "Automation of repetitive tasks and workflows, driven by agents connected to your existing tools."
+        - name: "Conversational business assistants"
+          text: "Assistants that answer, act and process your documents in your teams' own language."
+        - name: "AI for IT operations"
+          text: "Augmented monitoring, assisted diagnosis and infrastructure administration by specialized agents."
+        - name: "AI strategy and consulting"
+          text: "Identification of high-value use cases, AI roadmaps, governance, security and cost control."
+        - name: "Integration with your systems"
+          text: "Secure connection of agents to your applications, databases and APIs, on-premises or in the cloud."
+    - name: "Infrastructure and support foundation"
+      items:
+        - name: "Information systems security"
+          text: "Security audits, vulnerability testing, firewalls, endpoint protection, segmentation and Zero Trust."
+        - name: "Networks and virtualization"
+          text: "Enterprise networks, VPNs, hypervisors, high-availability clusters and containers."
+        - name: "Backup and continuity"
+          text: "Backup strategies, disaster recovery plans, replication and regular restore testing."
+        - name: "Systems and managed services"
+          text: "Windows and Linux administration, collaborative messaging, monitoring and user support."
+
+values:
+  title: "Our motto"
+  items:
+    - name: "Performance"
+      text: "By ensuring proper monitoring of your information system."
+      quote: "We help our clients take the leap from performance to excellence."
+    - name: "Efficiency"
+      text: "Through hands-on management of your information system."
+      quote: "Our expertise gives you an ally for maximum efficiency."
+    - name: "Visibility"
+      text: "Your information system is in good hands."
+      quote: "With regular reporting, enjoy clear visibility into the evolution of your IS."
+
+about:
+  title: "Who are we?"
+  paragraphs:
+    - "Based in Casablanca, ITKnowledge is the result of the union of a team of experts, both national and international, in the field of new digital technologies."
+    - "We position ourselves as a center of expertise for web- and mobile-oriented service development."
+    - "All of these assets allow us to optimize a valuable competitive advantage for our partners."
+  points:
+    - "More than 10 years of experience in ICT, commercial deployment and marketing."
+    - "A team of talented engineers, supervised by seasoned senior consultants."
+    - "Training and consulting in web marketing technologies."
+    - "Dedicated solutions for websites, mobile web and social networks."
+    - "SEO and active, dynamic website management."
+    - "Data security solutions for the Internet, websites and web applications."
+
+contact:
+  title: "Contact us"
+  text: "A question, a project? Write to us or call us directly."

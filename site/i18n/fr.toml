@@ -1,0 +1,29 @@
+[nav_services]
+other = "Services"
+
+[nav_expertise]
+other = "Expertise"
+
+[nav_about]
+other = "À propos"
+
+[nav_contact]
+other = "Contact"
+
+[contact_address]
+other = "Adresse"
+
+[contact_phone]
+other = "Téléphone"
+
+[contact_email]
+other = "Email"
+
+[notfound_title]
+other = "404 — Page introuvable"
+
+[notfound_text]
+other = "La page demandée n'existe pas ou a été déplacée."
+
+[back_home]
+other = "Retour à l'accueil"

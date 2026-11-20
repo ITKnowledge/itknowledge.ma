@@ -1,0 +1,76 @@
+hero:
+  kicker: "Notre savoir-faire pour une meilleure"
+  motto: ["Visibilité", "Rendement", "Performance"]
+  text: "ITKnowledge conçoit et déploie des agents IA au service des PME/PMI : automatisation intelligente, assistants métier et intégration à vos systèmes d'information, appuyés par plus de 18 ans d'expertise IT."
+  cta: { label: "Parlons de votre projet", href: "mailto:contact@itknowledge.ma" }
+
+services:
+  title: "Nos services"
+  items:
+    - name: "Accompagnement"
+      text: "Nous assistons nos clients dans la réalisation des cahiers des charges de leurs projets informatiques."
+    - name: "Intégration"
+      text: "Nous mettons en place l'architecture qui répond aux besoins les plus pointus de nos clients."
+    - name: "Conseil"
+      text: "Nous apportons le meilleur des nouvelles technologies pour satisfaire les nouveaux défis de nos clients."
+    - name: "Assistance"
+      text: "Nous sommes à l'écoute de nos clients pour résoudre leurs problèmes d'exploitation au quotidien."
+
+expertise:
+  title: "Nos domaines d'expertise"
+  groups:
+    - name: "Services d'IA agentique"
+      items:
+        - name: "Agents IA sur mesure"
+          text: "Conception et déploiement d'agents IA autonomes adaptés à vos processus métier, du prototype à la production."
+        - name: "Automatisation intelligente"
+          text: "Automatisation des tâches répétitives et des workflows, pilotée par des agents connectés à vos outils existants."
+        - name: "Assistants métier conversationnels"
+          text: "Des assistants capables de répondre, d'agir et de traiter vos documents dans le langage de vos équipes."
+        - name: "IA pour l'exploitation IT"
+          text: "Supervision augmentée, diagnostic assisté et administration de votre infrastructure par des agents spécialisés."
+        - name: "Conseil et stratégie IA"
+          text: "Identification des cas d'usage à forte valeur, feuille de route IA, gouvernance, sécurité et maîtrise des coûts."
+        - name: "Intégration à vos systèmes"
+          text: "Connexion sécurisée des agents à vos applications, bases de données et API, sur site ou dans le cloud."
+    - name: "Socle infrastructure et support"
+      items:
+        - name: "Sécurité des systèmes d'information"
+          text: "Audits de sécurité, tests de vulnérabilité, pare-feux, protection des postes, segmentation et Zero Trust."
+        - name: "Réseaux et virtualisation"
+          text: "Réseaux d'entreprise, VPN, hyperviseurs, clusters haute disponibilité et conteneurs."
+        - name: "Sauvegarde et continuité"
+          text: "Stratégies de sauvegarde, plans de reprise d'activité, réplication et tests de restauration réguliers."
+        - name: "Systèmes et infogérance"
+          text: "Administration Windows et Linux, messageries collaboratives, supervision et support utilisateurs."
+
+values:
+  title: "Notre devise"
+  items:
+    - name: "Performance"
+      text: "En assurant un bon suivi de votre système d'information."
+      quote: "Nous aidons nos clients à faire un saut de la performance à l'excellence."
+    - name: "Rendement"
+      text: "À travers une prise en main de votre système d'information."
+      quote: "Notre expertise vous donne un allié pour un rendement maximal."
+    - name: "Visibilité"
+      text: "Votre système d'information entre de bonnes mains."
+      quote: "Avec un reporting régulier, jouissez d'une visibilité sur l'évolution de votre SI."
+
+about:
+  title: "Qui sommes-nous ?"
+  paragraphs:
+    - "Basée à Casablanca, ITKnowledge est le résultat de l'union d'une équipe d'experts, tant à l'échelle nationale qu'internationale, dans le domaine des nouvelles technologies digitales."
+    - "Nous nous positionnons comme un centre de compétences en matière de développements orientés services web et mobiles."
+    - "L'ensemble de ces atouts nous permet l'optimisation d'un avantage compétitif précieux au service de nos partenaires."
+  points:
+    - "Un capital de plus de 10 ans d'expérience dans les NTIC, le déploiement commercial et marketing."
+    - "Une équipe d'ingénieurs talentueux, encadrée par des consultants seniors confirmés de haut niveau."
+    - "La formation et le conseil dans le domaine des technologies du web marketing."
+    - "La réalisation de solutions dédiées aux sites web, au web mobile et aux réseaux sociaux."
+    - "Le référencement et l'animation active et dynamique des sites web."
+    - "Le développement de solutions de sécurité des données sur Internet, de sites web et d'applications web."
+
+contact:
+  title: "Contactez-nous"
+  text: "Une question, un projet ? Écrivez-nous ou appelez-nous directement."

@@ -1,0 +1,108 @@
+.box {
+   background: #fff;
+   font-family: 'Belleza', sans-serif;
+   -webkit-border-radius: 1px;
+   -moz-border-radius: 1px;
+   border-radius: 1px;
+   -webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.2);
+   -moz-box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.2);
+   box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.2);
+   list-style-type: none;
+}
+
+#service {
+    
+    display: none;
+    
+}
+
+
+.twitt {
+    
+    position: relative;
+    height: 10px;
+    width: 10px;
+    top: 3%;
+    left: 95%;
+    
+}
+
+.product-list{
+   margin: 0 0 6px 0;
+   overflow: hidden;
+   position: relative;
+   padding: 1px 2px 2px 1px;
+}
+
+.product-list>ul{
+   margin: 0 0 0 -55px;
+   padding: 0 0 5px;
+   list-style: none;
+   width: 964px;
+   line-height: 16px;
+}
+.product-list>ul>li{
+   float: left;
+   width: 241px;
+   margin: 0 0 50px 57px;
+   padding: 30px 10px 70px;
+   text-align: center;
+   position: relative;
+}
+.product-list>ul.list-2>li{padding: 29px 10px 68px;}
+.img-product{
+   margin: 0 0 14px;
+   text-align: center;
+   position: relative;
+}
+
+.product-list h3{
+   font-size: 18px;
+   line-height: 20px;
+   font-weight: normal;
+   text-transform: uppercase;
+   color: #7e8c8d;
+   margin: 1 0 8px;
+   word-spacing: -1px;
+}
+
+.product-list .demien h3{margin: 0 0 -3px;}
+.offer h4 a,
+.product-list h3 a,
+.products h3 a{
+   color: #7e8c8d;
+   text-decoration: none;
+}
+.offer h4 a:hover, .product-list h3 a:hover, .products h3 a:hover{text-decoration: underline;}
+.product-list p{
+   margin: 0 0 17px;
+   padding: 5px 9px 10px;
+   text-align: left;
+}
+.product-list .price,
+.specific .price,
+.products .price{
+   font-size: 26px;
+   line-height: 28px;
+   display: block;
+   margin: 0 0 10px;
+}
+.product-list .price span,
+.specific .price span,
+.products .price span{
+   font-size: 16px;
+   color: #adb1b1;
+   font-weight: normal;
+}
+
+.info{
+   position: absolute;
+   top: 16px;
+   right: 21px;
+   background: url(../img/info-icon.png) no-repeat;
+   width: 48px;
+   height: 48px;
+   text-indent: -9999px;
+   overflow: hidden;
+   z-index: 1;
+}
