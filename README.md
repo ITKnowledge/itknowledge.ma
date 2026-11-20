@@ -14,7 +14,7 @@ site/                 Projet Hugo
   i18n/               Libellés d'interface (navigation, contact, 404)
   layouts/            Gabarits (page unique, 404, header/footer)
   assets/css/         Feuille de style (minifiée + fingerprintée par Hugo)
-  static/             Logo, favicon et robots.txt
+  static/             Logo, favicon, humans.txt et robots.txt
 archive/              Miroir figé de l'ancien site (version 2017) — référence, ne pas modifier
 deploy/               Scripts de déploiement
 docs/               Documents de conception

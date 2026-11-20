@@ -16,6 +16,7 @@
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   <link rel="icon" href="/favicon.ico" sizes="any">
+  <link type="text/plain" rel="author" href="/humans.txt">
   {{ $org := dict
     "@context" "https://schema.org"
     "@type" "Organization"

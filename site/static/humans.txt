@@ -1,0 +1,10 @@
+/* TEAM */
+Team: ITKnowledge
+Contact: contact [at] itknowledge.ma
+From: Casablanca, Maroc
+
+/* SITE */
+Built with Hugo — https://gohugo.io/
+Deployment target: Cloudflare Pages
+Source: https://github.com/ITKnowledge/itknowledge.ma
+Last rebuild: 2026-11
